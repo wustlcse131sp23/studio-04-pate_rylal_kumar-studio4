@@ -34,11 +34,11 @@ public class Flag {
 		StdDraw.point(0.5, 0.5);
 		
 		StdDraw.setPenColor(Color.ORANGE);
-		StdDraw.setPenRadius(0.25);
+		StdDraw.setPenRadius(0.20);
 		StdDraw.point(0.5, 0.5);
 		
 		StdDraw.setPenColor(Color.RED);
-		StdDraw.setPenRadius(0.20);
+		StdDraw.setPenRadius(0.15);
 		StdDraw.point(0.5, 0.5);
 	}
 }

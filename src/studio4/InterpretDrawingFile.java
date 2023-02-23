@@ -20,5 +20,40 @@ public class InterpretDrawingFile {
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
 		
+		
+		
+		String shapeType = in.next();
+		int redComponent = in.nextInt();
+		int greenComponent = in.nextInt();
+		int blueComponent  = in.nextInt();
+		boolean isFilled = in.nextBoolean();
+		
+		
+		double x = in.nextDouble();
+		double y = in.nextDouble(); 
+		double halfWidth = in.nextDouble();
+		double halfHeigh = in.nextDouble(); 
+		
+		
+		if (shapeType.equals("rectangle")) {
+			if (isFilled) {
+				StdDraw.setPenColor(redComponent, greenComponent, blueComponent);
+				StdDraw.filledRectangle(x, y, halfWidth, halfHeigh);
+			}
+			else {
+				StdDraw.setPenColor(redComponent, greenComponent, blueComponent);
+				StdDraw.rectangle(x, y, halfWidth, halfHeigh);
+			}
+			
+		}
+		
+		if (shapeType.equals("ellipse")) {
+			StdDraw.setPenColor(redComponent, greenComponent, blueComponent);
+			StdDraw.filledEllipse(x, y, halfWidth, halfHeigh);
+		}
+		if (shapeType.equals("trinagle")) {
+			//idk how to draw trinagles lol
+		}
+		
 	}
 }
